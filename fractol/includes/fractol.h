@@ -40,8 +40,8 @@ typedef enum e_fractal
  * CONST
  *************************************/
 
-#define WINDOW_WIDTH 1000
-#define WINDOW_HEIGHT 800
+#define WINDOW_WIDTH 1200
+#define WINDOW_HEIGHT 850
 #define ZOOM_IN 0.9
 #define ZOOM_OUT 1.1
 #define NAVIGATION_OFFSET 0.03

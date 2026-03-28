@@ -3,7 +3,7 @@
 #############
 
 CC							= cc
-CFLAGS						= -Wall -Wextra -Werror -fPIC -g3 #-fsanitize=address
+CFLAGS						= -Wall -Wextra -Werror -fPIC #-g3 #-fsanitize=address
 
 NAME						= fractol
 
@@ -17,16 +17,16 @@ FT_PRINTF					= $(FT_PRINTF_PATH)/libftprintf.a
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S),Linux)
-	MLX_PATH	= ./minilibx-linux
-    MLX_FLAGS = -lmlx -lX11 -lXext -lm
-	MLX 	= $(MLX_PATH)/libmlx.a
+	MLX_PATH				= ./minilibx-linux
+    MLX_FLAGS 				= -lmlx -lX11 -lXext -lm
+	MLX 					= $(MLX_PATH)/libmlx.a
 endif
 
 ifeq ($(UNAME_S),Darwin)
 	# OpenGL backend
-	MLX_PATH = ./minilibx_macos_opengl
-	MLX_FLAGS = -L$(MLX_PATH) -lmlx -framework AppKit -framework OpenGL
-	MLX 	= $(MLX_PATH)/libmlx.a
+	MLX_PATH 				= ./minilibx_macos_opengl
+	MLX_FLAGS 				= -L$(MLX_PATH) -lmlx -framework AppKit -framework OpenGL
+	MLX 					= $(MLX_PATH)/libmlx.a
 endif
 
 # MLX_PATH					= minilibx-linux
